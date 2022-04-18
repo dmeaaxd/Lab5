@@ -15,7 +15,6 @@ import static dmeaaxd.command.CommandObjects.commandObjects;
  *
  * @author Maksim Ushakov "dmeaaxd@gmail.com"
  */
-
 public class Main {
     public static void main(String[] args) {
         String path_to_file = System.getenv("path_to_file");
