@@ -1,5 +1,6 @@
-package dmeaaxd.command;
+package dmeaaxd.command.commandCode;
 
+import dmeaaxd.command.*;
 import dmeaaxd.command.pattern.Command;
 import dmeaaxd.command.pattern.CommandInvoker;
 import dmeaaxd.command.pattern.CommandHolder;

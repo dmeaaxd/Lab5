@@ -8,7 +8,7 @@ import dmeaaxd.command.pattern.CommandHolder;
 import java.io.File;
 import java.util.ArrayList;
 
-import static dmeaaxd.command.CommandObjects.commandObjects;
+import static dmeaaxd.command.commandCode.CommandObjects.commandObjects;
 
 /**
  * The class where the program is run
@@ -16,10 +16,10 @@ import static dmeaaxd.command.CommandObjects.commandObjects;
  * @author Maksim Ushakov "dmeaaxd@gmail.com"
  */
 public class Main {
-    public static void main(String[] args) {
-        //String path_to_file = System.getenv("path_to_file");
-        String path_to_file = "/Users/dmeaaxd/Documents/JavaProjects/Lab5/src/main/java/dmeaaxd/InputCollection.xml";
 
+    public static String path_to_file = System.getenv("path_to_file");
+
+    public static void main(String[] args) {
         CommandInvoker commandInvoker = new CommandInvoker();
         ArrayList<HumanBeing> collection = new ArrayList<>();
         CommandHolder commandHolder = new CommandHolder();

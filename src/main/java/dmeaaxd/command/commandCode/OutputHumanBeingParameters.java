@@ -1,5 +1,6 @@
 package dmeaaxd.command.commandCode;
 
+import dmeaaxd.Main;
 import dmeaaxd.collection.HumanBeing;
 
 import java.io.File;
@@ -26,7 +27,7 @@ public class OutputHumanBeingParameters {
 
         String text;
 
-        String path_to_file = "/Users/dmeaaxd/Documents/JavaProjects/Lab5/src/main/java/dmeaaxd/InputCollection.xml";
+        String path_to_file = Main.path_to_file;
 
         File file = new File(path_to_file);
         try (FileOutputStream fos = new FileOutputStream(file)) {

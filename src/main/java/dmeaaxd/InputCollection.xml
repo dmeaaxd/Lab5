@@ -6,12 +6,26 @@
             <x>14</x>
             <y>15.31</y>
         </coordinates>
-        <creationDate>1650326579652</creationDate>
+        <creationDate>1650328064231</creationDate>
         <realHero>true</realHero>
         <hasToothpick>false</hasToothpick>
         <impactSpeed>412</impactSpeed>
         <weaponType>SHOTGUN</weaponType>
         <mood>APATHY</mood>
+        <car>true</car>
+    </HumanBeing>
+    <HumanBeing id="85607">
+        <name>1</name>
+        <coordinates>
+            <x>1</x>
+            <y>1.0</y>
+        </coordinates>
+        <creationDate>1650328072598</creationDate>
+        <realHero>true</realHero>
+        <hasToothpick>true</hasToothpick>
+        <impactSpeed>1</impactSpeed>
+        <weaponType>HAMMER</weaponType>
+        <mood>SADNESS</mood>
         <car>true</car>
     </HumanBeing>
 </root>
