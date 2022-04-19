@@ -7,6 +7,7 @@ export path_to_file=<path to file>
 java -jar .\target\lab5.jar path_to_file
 ~~~
 Example of a valid XML file:
+
 `InputCollection.xml`
 ~~~
 <?xml version = "1.0" encoding = "UTF-8" ?>
