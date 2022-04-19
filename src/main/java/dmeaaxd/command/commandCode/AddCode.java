@@ -53,6 +53,6 @@ public class AddCode {
         collection.add(element);
         final String ANSI_GREEN = "\u001B[32m";
         final String ANSI_RESET = "\u001B[0m";
-        return ANSI_GREEN + "Элемент коллекции добавлен" + ANSI_GREEN + "\n" + ANSI_RESET;
+        return ANSI_GREEN + "Элемент коллекции добавлен" + ANSI_GREEN + ANSI_RESET;
     }
 }

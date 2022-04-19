@@ -1,5 +1,6 @@
 package dmeaaxd.command.commandCode;
 
+import dmeaaxd.InputManager;
 import dmeaaxd.Main;
 import dmeaaxd.collection.HumanBeing;
 
@@ -57,7 +58,7 @@ public class OutputHumanBeingParameters {
 
             return ANSI_GREEN + "Коллекция успешно сохранена" + ANSI_GREEN + ANSI_RESET;
         } catch (IOException e) {
-            return ANSI_RED + "Файл не найден" + ANSI_RED + ANSI_RESET;
+            return ANSI_RED + "Ошибка чтения файла" + ANSI_RED + ANSI_RESET;
         }
     }
 }
