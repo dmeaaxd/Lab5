@@ -1,1 +1,17 @@
-<?xml version = "1.0" encoding = "UTF-8" ?><root><HumanBeing id="489901"><name>Igor</name><coordinates><x>-1</x><y>0.0</y></coordinates><creationDate>1650346579092</creationDate><realHero>false</realHero><hasToothpick>false</hasToothpick><impactSpeed>200</impactSpeed><weaponType>KNIFE</weaponType><mood>SADNESS</mood><car>false</car></HumanBeing></root>
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<root>
+    <HumanBeing id="739263">
+        <name>Maksim</name>
+        <coordinates>
+            <x>1</x>
+            <y>1.0</y>
+        </coordinates>
+        <creationDate>1650358655860</creationDate>
+        <realHero>true</realHero>
+        <hasToothpick>true</hasToothpick>
+        <impactSpeed>1</impactSpeed>
+        <weaponType>HAMMER</weaponType>
+        <mood>SADNESS</mood>
+        <car>true</car>
+    </HumanBeing>
+</root>

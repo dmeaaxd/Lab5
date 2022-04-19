@@ -32,7 +32,8 @@ public class MyParser {
         while ((line = br.readLine()) != null) {
             xmlText.append(line);
         }
-        return xmlText.toString();
+        String text = xmlText.toString().trim();
+        return text;
     }
 
     /**
@@ -44,6 +45,10 @@ public class MyParser {
 
     public ArrayList<HumanBeing> parse(String path_to_file) throws Exception {
         Serializer serializer = new Persister();
+        String checkIsEmpty = readXML(path_to_file);
+        if (checkIsEmpty.isEmpty()){
+            return new ArrayList<HumanBeing>();
+        }
         XMLRoot root = serializer.read(XMLRoot.class, readXML(path_to_file));
         ArrayList<HumanBeing> collecion = new ArrayList<>();
 

@@ -17,7 +17,7 @@ import static dmeaaxd.command.commandCode.CommandObjects.commandObjects;
  */
 public class Main {
 
-    public static String path_to_file = System.getenv("path_to_file");
+    public static String path_to_file = System.getenv("PATH_TO_FILE");
 
     public static void main(String[] args) {
         CommandInvoker commandInvoker = new CommandInvoker();
@@ -28,10 +28,23 @@ public class Main {
 
         MyParser parser = new MyParser();
 
+        if (path_to_file == null){
+            System.out.println(ANSI_RED + "Переменная окружения не обнаружена. Укажите новый путь: " + ANSI_RED + ANSI_RESET);
+            path_to_file = InputManager.input();
+        }
+
         while (true){
             File file = new File(path_to_file);
             if (file.length() == 0){
                 break;
+            }
+            if (file.isDirectory()){
+                System.out.print(ANSI_RED + "Программа не может работать с директорией. Введите exit, чтобы выйти или укажите путь на новый файл: " + ANSI_RED + ANSI_RESET);
+                path_to_file = InputManager.input();
+                if (path_to_file.equals("exit")){
+                    System.out.println(ANSI_RED + "Сессия завершена" + ANSI_RED + ANSI_RESET);
+                    System.exit(0);
+                }
             }
             if (file.canRead() && file.canWrite()){
                 try {
