@@ -1,12 +1,12 @@
 # _Laboratory Work №5_
 ***
-##Enter the following to build and run the project:
+Enter the following to build and run the project:
 ~~~
 mvn package
 export path_to_file=<path to file>
 java -jar .\target\lab5.jar path_to_file
 ~~~
-##Example of a valid XML file:
+Example of a valid XML file:
 `InputCollection.xml`
 ~~~
 <?xml version = "1.0" encoding = "UTF-8" ?>
