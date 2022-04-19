@@ -14,8 +14,8 @@ public class CommandInvoker {
 
     /**
      * Method for registering commands
-     * @param commandName
-     * @param command
+     * @param commandName The command name
+     * @param command The command object
      */
 
     public void register(String commandName, Command command){
@@ -24,10 +24,10 @@ public class CommandInvoker {
 
     /**
      * Method to run the program
-     * @param commandInvoker
-     * @param commandName
-     * @param collection
-     * @param arg
+     * @param commandInvoker The invoker
+     * @param commandName The command name
+     * @param collection The collection
+     * @param arg The argument
      * @return The result of the command
      */
 

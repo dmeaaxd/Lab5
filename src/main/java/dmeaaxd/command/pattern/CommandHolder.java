@@ -15,18 +15,11 @@ import java.util.*;
 
 public class CommandHolder {
 
-    /**
-     * Create new Date to get collection initialization date
-     */
-
     private final java.util.Date creationDate;
     public CommandHolder() {
         creationDate = new Date();
     }
 
-    /**
-     * Implementation of the exit command
-     */
 
     public String exit() {
         final String ANSI_RED = "\u001B[31m";
@@ -36,9 +29,6 @@ public class CommandHolder {
         return null;
     }
 
-    /**
-     * Implementation of the help command
-     */
 
     public String help(CommandInvoker commandInvoker) {
         StringBuilder stringBuilder = new StringBuilder();
@@ -51,9 +41,7 @@ public class CommandHolder {
         return ANSI_BLUE + "===============" + ANSI_BLUE + "\n" + stringBuilder + ANSI_BLUE + "===============" + ANSI_BLUE + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the clear command
-     */
+
 
     public String clear(ArrayList<HumanBeing> collection) {
         final String ANSI_GREEN = "\u001B[32m";
@@ -62,18 +50,14 @@ public class CommandHolder {
         return ANSI_GREEN + "Коллекция успешно очищена" + ANSI_GREEN + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the add command
-     */
+
 
     public String add(ArrayList<HumanBeing> collection) {
         final String ANSI_RESET = "\u001B[0m";
         return AddCode.addElement(collection) + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the show command
-     */
+
 
     public String show(ArrayList<HumanBeing> collection) {
         final String ANSI_RED = "\u001B[31m";
@@ -89,9 +73,7 @@ public class CommandHolder {
         }
     }
 
-    /**
-     * Implementation of the info command
-     */
+
 
     public String info(ArrayList<HumanBeing> collection) {
         final String ANSI_BLUE = "\u001B[34m";
@@ -99,9 +81,7 @@ public class CommandHolder {
         return ANSI_BLUE + "===============" + ANSI_BLUE + ANSI_RESET + "\n" + "Тип коллекции: " + collection.getClass() + "\n" + "Дата инициализации: " + creationDate + "\n" + "Количество элементов в коллекции: " + collection.size() + "\n" + ANSI_RESET + ANSI_BLUE + "===============" + ANSI_BLUE + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the updateId command
-     */
+
 
     public String updateId(ArrayList<HumanBeing> collection, String argId) {
         final String ANSI_RED = "\u001B[31m";
@@ -129,9 +109,7 @@ public class CommandHolder {
         return output;
     }
 
-    /**
-     * Implementation of the remove_by_id command
-     */
+
 
     public String remove_by_idId(ArrayList<HumanBeing> collection, String argId) {
         final String ANSI_RED = "\u001B[31m";
@@ -157,9 +135,7 @@ public class CommandHolder {
         return output;
     }
 
-    /**
-     * Implementation of the reorder command
-     */
+
 
     public String reorder(ArrayList<HumanBeing> collection) {
         final String ANSI_RED = "\u001B[31m";
@@ -177,9 +153,7 @@ public class CommandHolder {
         return ANSI_GREEN + "Коллекция успешно отсортирована" + ANSI_GREEN + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the sort command
-     */
+
 
     public String sort(ArrayList<HumanBeing> collection) {
         final String ANSI_RED = "\u001B[31m";
@@ -193,9 +167,7 @@ public class CommandHolder {
         return ANSI_GREEN + "Коллекция успешно отсортирована" + ANSI_GREEN + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the remove_lower command
-     */
+
 
     public String remove_lower(ArrayList<HumanBeing> collection) {
         final String ANSI_RESET = "\u001B[0m";
@@ -208,9 +180,7 @@ public class CommandHolder {
         return ANSI_GREEN + "Все подходящие элементы были удалены" + ANSI_GREEN + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the averange_of_impact_speed command
-     */
+
 
     public String averange_of_impact_speed(ArrayList<HumanBeing> collection) {
         final String ANSI_RESET = "\u001B[0m";
@@ -231,9 +201,7 @@ public class CommandHolder {
         return ANSI_GREEN + "Среднее значение поля impactSpeed = " + (sum / amount) + ANSI_GREEN + ANSI_RESET;
     }
 
-    /**
-     * Implementation of the print_field_descending_weapon_type command
-     */
+
 
     public String print_field_descending_weapon_type(ArrayList<HumanBeing> collection) {
         final String ANSI_RESET = "\u001B[0m";
@@ -257,9 +225,7 @@ public class CommandHolder {
         }
     }
 
-    /**
-     * Implementation of the group_counting_by_impact_speed command
-     */
+
 
     public String group_counting_by_impact_speed(ArrayList<HumanBeing> collection) {
         final String ANSI_RESET = "\u001B[0m";
@@ -286,19 +252,14 @@ public class CommandHolder {
         }
     }
 
-    /**
-     * Implementation of the save command
-     */
+
 
     public String save(ArrayList<HumanBeing> collection) {
         OutputHumanBeingParameters saver = new OutputHumanBeingParameters();
         return saver.writeXML(collection);
     }
 
-    /**
-     * Implementation of the execute_script command
-     * @return
-     */
+
 
     public String execute_script(CommandInvoker commandInvoker, ArrayList<HumanBeing> collection, File file) {
         final String ANSI_RESET = "\u001B[0m";

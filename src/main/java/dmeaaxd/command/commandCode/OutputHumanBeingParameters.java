@@ -21,6 +21,7 @@ public class OutputHumanBeingParameters {
     /**
      * Method for writing collection to xml file
      * @param collection The collection
+     * @return output
      */
 
     public String writeXML(ArrayList<HumanBeing> collection) {

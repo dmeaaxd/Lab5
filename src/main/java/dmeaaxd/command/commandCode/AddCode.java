@@ -45,6 +45,7 @@ public class AddCode {
     /**
      * In the method, the previously created HumanBeing object is added to the collection
      * @param collection The collection
+     * @return output
      */
 
     public static String addElement(ArrayList<HumanBeing> collection){

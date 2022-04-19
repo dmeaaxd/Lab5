@@ -21,6 +21,7 @@ public class MyParser {
      * The method translates bytes (BufferedInputStream) into text
      * @param path_to_file The path to file
      * @return XML file text
+     * @throws IOException Thrown when file is empty or invalid
      */
 
     public String readXML(String path_to_file) throws IOException {
@@ -35,9 +36,10 @@ public class MyParser {
     }
 
     /**
-     * The method receives the text of the XML file and extracts the values ​​for HumanBeing from it
+     * The method receives the text of the XML file and extracts the values for HumanBeing from it
      * @param path_to_file The path to file
      * @return collection from file
+     * @throws Exception Thrown when file does not exist or IOException
      */
 
     public ArrayList<HumanBeing> parse(String path_to_file) throws Exception {

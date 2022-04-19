@@ -12,9 +12,9 @@ public interface Command {
 
     /**
      * The method runs the command
-     * @param commandInvoker
-     * @param collection
-     * @param arg
+     * @param commandInvoker The invoker
+     * @param collection The collection
+     * @param arg The command argument
      * @return The result of the command
      */
 
