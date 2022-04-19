@@ -24,9 +24,9 @@ public class OutputHumanBeingParameters {
 
     public String writeXML(ArrayList<HumanBeing> collection) {
 
-        String path_to_file = "/Users/dmeaaxd/Documents/JavaProjects/lab_5/src/main/java/dmeaaxd/InputCollection.xml";
-
         String text;
+
+        String path_to_file = "/Users/dmeaaxd/Documents/JavaProjects/Lab5/src/main/java/dmeaaxd/InputCollection.xml";
 
         File file = new File(path_to_file);
         try (FileOutputStream fos = new FileOutputStream(file)) {

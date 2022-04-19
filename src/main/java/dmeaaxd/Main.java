@@ -17,7 +17,8 @@ import static dmeaaxd.command.CommandObjects.commandObjects;
  */
 public class Main {
     public static void main(String[] args) {
-        String path_to_file = System.getenv("path_to_file");
+        //String path_to_file = System.getenv("path_to_file");
+        String path_to_file = "/Users/dmeaaxd/Documents/JavaProjects/Lab5/src/main/java/dmeaaxd/InputCollection.xml";
 
         CommandInvoker commandInvoker = new CommandInvoker();
         ArrayList<HumanBeing> collection = new ArrayList<>();
