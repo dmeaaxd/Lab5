@@ -3,7 +3,7 @@
 Enter the following to build and run the project:
 ~~~
 mvn package
-export path_to_file=<path to file>
+export PATH_TO_FILE=<path to file>
 java -jar .\target\lab5.jar 
 ~~~
 Example of a valid XML file:
