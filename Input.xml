@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<root>
+    <HumanBeing id="680230">
+        <name>Maksim</name>
+        <coordinates>
+            <x>12</x>
+            <y>421.0</y>
+        </coordinates>
+        <creationDate>1650565350547</creationDate>
+        <realHero>false</realHero>
+        <hasToothpick>false</hasToothpick>
+        <impactSpeed>112</impactSpeed>
+        <weaponType>HAMMER</weaponType>
+        <mood>LONGING</mood>
+        <car>false</car>
+    </HumanBeing>
+</root>

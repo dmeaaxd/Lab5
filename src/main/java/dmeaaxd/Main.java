@@ -16,7 +16,6 @@ import static dmeaaxd.command.commandCode.CommandObjects.commandObjects;
  * @author Maksim Ushakov "dmeaaxd@gmail.com"
  */
 public class Main {
-
     public static String path_to_file = System.getenv("PATH_TO_FILE");
 
     public static void main(String[] args) {
@@ -29,7 +28,7 @@ public class Main {
         MyParser parser = new MyParser();
 
         if (path_to_file == null){
-            System.out.println(ANSI_RED + "Переменная окружения не обнаружена. Укажите новый путь: " + ANSI_RED + ANSI_RESET);
+            System.out.print(ANSI_RED + "Переменная окружения не обнаружена. Укажите новый путь: " + ANSI_RED + ANSI_RESET);
             path_to_file = InputManager.input();
         }
 
@@ -39,35 +38,22 @@ public class Main {
                 break;
             }
             if (file.isDirectory()){
-                System.out.print(ANSI_RED + "Программа не может работать с директорией. Введите exit, чтобы выйти или укажите путь на новый файл: " + ANSI_RED + ANSI_RESET);
+                System.out.print(ANSI_RED + "Программа не может работать с директорией. Укажите путь на новый файл: " + ANSI_RED + ANSI_RESET);
                 path_to_file = InputManager.input();
-                if (path_to_file.equals("exit")){
-                    System.out.println(ANSI_RED + "Сессия завершена" + ANSI_RED + ANSI_RESET);
-                    System.exit(0);
-                }
             }
             if (file.canRead() && file.canWrite()){
                 try {
                     collection = parser.parse(path_to_file);
                     break;
                 } catch (Exception e) {
-                    System.out.print(ANSI_RED + "Файл некорректен. Введите exit, чтобы выйти или укажите путь на новый файл: " + ANSI_RED + ANSI_RESET);
+                    System.out.print(ANSI_RED + "Файл некорректен. Укажите путь на новый файл: " + ANSI_RED + ANSI_RESET);
                     path_to_file = InputManager.input();
-                    if (path_to_file.equals("exit")){
-                        System.out.println(ANSI_RED + "Сессия завершена" + ANSI_RED + ANSI_RESET);
-                        System.exit(0);
-                    }
                 }
             } else {
-                System.out.print(ANSI_RED + "Нехватка прав доступа. Введите exit, чтобы выйти или укажите путь на новый файл: " + ANSI_RED + ANSI_RESET);
+                System.out.print(ANSI_RED + "Нехватка прав доступа. Укажите путь на новый файл: " + ANSI_RED + ANSI_RESET);
                 path_to_file = InputManager.input();
-                if (path_to_file.equals("exit")){
-                    System.exit(0);
-                }
             }
         }
-        
-
 
         commandObjects(commandInvoker, commandHolder);
 
